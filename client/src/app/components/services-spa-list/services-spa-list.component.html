@@ -1,0 +1,28 @@
+<div class="md-form">
+    <input style="margin-left: 1.2em;" type="search" [(ngModel)]="searchText" placeholder="Search text">
+    <button style="margin-left: 30em;" type="button" class="btn btn-secondary" (click)="ordenarPorPrecioMayor()" [disabled]="searchText">Por precio mayor</button>
+    <button style="margin-left: 2em;" type="button" class="btn btn-secondary" (click)="ordenarPorPrecioMenor()" [disabled]="searchText">Por precio menor</button>
+    <button style="margin-left: 2em;" type="button" class="btn btn-secondary" (click)="ordenarPorDefecto()" [disabled]="searchText">Por defecto</button>
+</div>
+<div class="col-md-4" *ngFor="let service of services | filter: searchText">
+    <div class="card text-center" style="margin-top: 2em;">
+        <div class="card-header bg-dark text-white d-flex justify-content-between align-item-center">
+            {{service.nombre}}
+        </div>
+        <img [src]="service.image == '' ? '/assets/nophoto.png' : service.image" class="card-img-top" style="max-width: 500px !important; max-height: 180px !important;">
+        <div class="card-body">
+            <style type="text/css">
+                #contenido {
+                    overflow:hidden;
+                    white-space:nowrap;
+                    text-overflow: ellipsis;
+                }                    
+            </style>
+            <p id="contenido">{{service.descripcion}}</p>            
+            <p style="text-align: left;">Precio: {{service.precio}}€</p>
+            <a [routerLink]="['/spa', service.id]" class="btn btn-info btn-block">
+                VER DISPONIBILIDAD DEL SERVICIO
+            </a>
+        </div>
+    </div>
+</div>
