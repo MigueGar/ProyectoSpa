@@ -15,7 +15,7 @@ _Se han usado las siguientes herramientas:_
 - TypeScript 3.8.3 (lenguaje)
 - Bootstrap (framework de estilos)
 
-### Instalación 🔧
+### Instalación y ejecución 🔧
 
 _Primer paso: instalación de las herramientas_
 
@@ -33,19 +33,19 @@ _Cuarto paso: acceder /ProyectoSpa/server y ejecutar en la consola node_
 npm run build
 ```
 
-- Quinto paso: acceder /ProyectoSpa/server y ejecutar en otra consola node_
+_Quinto paso: acceder /ProyectoSpa/server y ejecutar en otra consola node_
 
 ```
 npm run dev
 ```
 
-- Sext paso: acceder /ProyectoSpa/client y ejecutar en otra consola node_
+_Sexto paso: acceder /ProyectoSpa/client y ejecutar en otra consola node_
 
 ```
 ng serve
 ```
 
-- Por último, en el navegador accedemos a la ruta:_
+_Por último, en el navegador accedemos a la ruta:_
 
 ```
 http://localhost:4200/spa
